@@ -9,7 +9,7 @@ export default config({
 
   cloud: {
     // Взема ID-то от Cloudflare Variables, иначе ползва дефолт за тестване
-    project: import.meta.env.KEYSTATIC_CLOUD_PROJECT || 'astro-template/startertemplate',
+    project: import.meta.env.KEYSTATIC_CLOUD_PROJECT || 'electric-company/electric-company',
   },
  singletons: {
   settings: {
