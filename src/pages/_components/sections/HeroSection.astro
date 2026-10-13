@@ -1,0 +1,185 @@
+---
+import Button2 from "@/src/GOK_LIBRARY/buttons/button2.astro";
+---
+
+<div class="hero-container">
+  <picture class="picture">
+    <source
+      media="(max-width: 1200px)"
+      srcset="/template6/hero-desktop.webp"
+    />
+    <source
+      media="(min-width: 1201px)"
+      srcset="/template6/hero-desktop.webp"
+    />
+    <img
+      aria-hidden="true"
+      class="hero-image"
+      loading="eager"
+      decoding="async"
+      src="/template6/hero-desktop.webp"
+      alt="template-5-hero-image"
+      style={{
+        objectFit: "cover",
+        width: "100%",
+        height: "100%",
+        zIndex: 5,
+      }}
+    />
+  </picture>
+  <div class="filter"></div>
+
+  <section class="text-container">
+    <div class="title-container">
+      <h1
+        class="h1"
+        style={{
+          color: "white",
+          padding: 0,
+          fontWeight: 600,
+        }}
+      >
+        {`Тийм Илектрик`}
+      </h1>
+      <h2
+        class="h6"
+        style={{
+          color: "white",
+          fontWeight: "450",
+        }}
+      >
+       {`Електричарски `}{<span style={{color: 'var(--gray-light)'}}>{'услуги '}</span>}{` 24 / 7`}
+      </h2>
+      <Button2
+        variant="transparent"
+        href={"tel:+359890899885"}
+        content={"ЗАПАЗЕТЕ KОНСУЛТАЦИЯ"}
+      />
+    </div>
+  </section>
+</div>
+
+<style>
+  .hero-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    aspect-ratio: 1 / 2;
+    margin-top: 3rem;
+}
+
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(185deg, var(--secondary-dark-1) 25%, transparent 120%);
+    z-index: 5;
+}
+
+@media screen and (min-width: 650px) {
+    .hero-container {
+        width: 100vw;
+        aspect-ratio: 20 / 15;
+        margin-top: 3.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-container {
+        margin-top: 4rem;
+        aspect-ratio: 20 / 9;
+    }
+
+    .filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(60deg, var(--secondary-dark-1) 45%, transparent 120%);
+        z-index: 5;
+        opacity: .9;
+    }
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*TextContainer*/
+.text-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 3rem;
+
+    .title-container {
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+
+.title {
+    color: var(--gray-light);
+    font-weight: 550;
+    line-height: 110%;
+    text-align: center;
+
+}
+
+.subtitle {
+    color: white;
+    padding: 0;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* Styles for large devices */
+    .text-container {
+        width: 50vw;
+        left: 0;
+        top: 50%;
+        gap: 5rem;
+        transform: translate(0, -50%);
+        padding-left: 10vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+       
+      
+        .title-container {
+            flex-grow: 0;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+    }
+    .subtitle{
+        text-align: left;
+    }
+    .title {
+        text-align: left;
+    }
+}
+</style>

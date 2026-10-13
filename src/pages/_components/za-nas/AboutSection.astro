@@ -1,0 +1,100 @@
+---
+import Title6 from "@/src/GOK_LIBRARY/titles/title6.astro"
+const {title} = Astro.props
+---
+
+
+    <div class="layout">
+      <div class='content-wrapper'>
+        <h2 class="h3">{title}</h2>
+       
+
+        <p class="body1 content">
+          {`„Бизнес Консулт Груп“ е консултантска компания, основана преди повече от 15 години в София с мисията да помага на българските компании да растат устойчиво и стратегически. Началото е поставено през 2009 година от Николай Петров – експерт по бизнес развитие с дългогодишен опит в управлението на процеси, оптимизацията и стратегическото планиране.`}
+        </p>
+
+        <p class="body1 content">
+          {`От самото си създаване компанията се отличава с индивидуален подход, внимание към детайла и ангажимент към реалните резултати. Клиентската база постепенно се разширява – от малки стартиращи фирми до утвърдени организации, които търсят надежден партньор за подобряване на своята ефективност, управление на операциите и въвеждане на устойчиви бизнес стратегии. Натрупаното доверие се дължи на професионализъм, прозрачност и последователна работа.`}
+        </p>
+
+        <div class="picture-container">
+          <div class="image-container">
+            <img
+              class="image"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src={"/consultant1/thumbnails/about.webp"}
+              alt="Бизнес Консулт Груп – екип"
+            />
+          </div>
+        </div>
+
+        <p class="body1 content" >
+          {`С течение на годините „Бизнес Консулт Груп“ внедрява модерни аналитични решения, методологии за управление на процеси и дигитални инструменти, които помагат на клиентите да постигат по-висока продуктивност и по-добри финансови резултати. Екипът се разширява с експерти в сферата на управленското консултиране, стратегическото планиране, финансовия анализ и бизнес трансформацията.`}
+        </p>
+
+        <p class="body1 content" >
+          {`Днес компанията е предпочитан партньор за организации от различни индустрии в цялата страна. „Бизнес Консулт Груп“ предлага цялостни консултантски решения, базирани на доверие, дългосрочни партньорства и практичен подход към бизнеса. Фокусът е върху устойчив растеж, модернизация и реални резултати.`}
+        </p>
+      </div>
+    </div>
+
+
+<style>
+    .layout{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5rem 1rem;
+}
+
+/*Picture*/
+.picture-container {
+    position: relative;
+    width: min(100%, 1000px);
+    display: flex;
+    
+}
+
+.image {
+    width: min(100%, 1000px);
+    aspect-ratio: 1 / 1;
+    border-radius: 36px;
+    object-fit: cover;
+}
+
+/*TextContainer*/
+.content-wrapper{
+    width: min(100%, 1000px);
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+  
+}
+@media screen and (min-width: 1200px){
+    .content-wrapper{
+        padding: 0;
+    }
+   .image {
+    width: min(100%, 1000px);
+    aspect-ratio: 1 / 0.4;
+    border-radius: 36px;
+    object-fit: cover;
+}
+
+}
+.title{
+    color: black;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+.content{
+    font-weight: 300;
+}
+
+
+</style>

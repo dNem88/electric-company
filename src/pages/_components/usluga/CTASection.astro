@@ -1,0 +1,44 @@
+---
+import Button4 from "@/src/GOK_LIBRARY/buttons/button4.astro";
+import Title6 from "@/src/GOK_LIBRARY/titles/title6.astro";
+---
+
+<section class="wrapper">
+
+  <h3 class="title h5">Запазете си час за консултация с нас още сега!</h3>
+  <Button4
+    variant={"primary"}
+    content={"Запазете консултация"}
+    href={"/kontakti"}
+  />
+</section>
+
+<style>
+ .wrapper{
+    width: 100%;
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+    background-color: var(--secondary-dark-1);
+    gap: 4rem;
+}
+.title{
+    text-align: center;
+    width: min(100%, 600px);
+    color: white !important;
+}
+@media screen and (min-width: 1200px){
+    .wrapper{
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .title{
+        text-align: center !important;
+    }
+    
+}
+</style>

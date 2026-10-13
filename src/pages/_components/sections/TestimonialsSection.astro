@@ -1,0 +1,57 @@
+---
+import CardTestimonials3 from "@/src/GOK_LIBRARY/cards/testimonials/card-testimonials-3.astro";
+import Title3 from "@/src/GOK_LIBRARY/titles/title3.astro";
+import LayoutCards from "@/src/GOK_LIBRARY/layouts-sections/layout-cards.astro";
+
+let customers = [
+    {
+        name: 'Никола Несторов',
+        age: '25',
+        city: 'София',
+        avatarUrl: '/consultant1/thumbnails/avatar6.webp',
+        testimonial: "Счетоводителят в тази фирма е изключителен професионалист! От момента на първоначалния контакт до решаването на всички финансови въпроси, получих персонализирано внимание и грижа. Всичко беше обяснено ясно и ме накара да се чувствам уверенa, че финансите ми са в добри ръце. Препоръчвам услугите им на всички!"
+    },
+    {
+        name: 'Даниел Чочев',
+        age: '48',
+        avatarUrl: '/consultant1/thumbnails/avatar5.webp',
+        city: 'Плевен',
+        testimonial: "Работата със счетоводителя беше прекрасно изживяване! Той е много внимателен и професионален. Всяко мое притеснение беше разгледано с внимание, а предложените решения бяха ефективни и лесни за изпълнение. Горещо препоръчвам услугите на всички, които търсят надежден счетоводител."
+    },
+    {
+        name: 'Елена Василева',
+        age: '39',
+        avatarUrl: '/consultant1/thumbnails/avatar7.webp',
+        city: 'София',
+        testimonial: "Това е най-добрият счетоводител, с когото съм работила! Той е внимателен, информиран и наистина се грижи за клиентите си. Професионализмът и човешкият му подход ми вдъхнаха доверие, и със сигурност ще продължа да използвам техните услуги."
+    }
+];
+
+
+---
+
+<LayoutCards
+ 
+  sxTitle={{ paddingLeft: "1rem" }}
+>
+  <Title3
+  spanWord={3}
+    slot="title"
+     title={'Истински истории, реални резултати'}
+    sx={{textAlign: 'center'}}
+  />
+  <Fragment slot="cards">
+    {
+      customers.map((x, idx) => (
+        
+        <CardTestimonials3
+            name={x.name}
+            age={x.age}
+            city={x.city}
+            avatarUrl={x.avatarUrl}
+            testimonial={x.testimonial}
+        />
+      ))
+    }
+  </Fragment>
+</LayoutCards>

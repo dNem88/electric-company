@@ -1,0 +1,42 @@
+---
+import CardTeam4 from "@/src/GOK_LIBRARY/cards/team/card-team-4.astro";
+import Title4 from "@/src/GOK_LIBRARY/titles/title4.astro";
+import LayoutCards from "@/src/GOK_LIBRARY/layouts-sections/layout-cards.astro";
+import { WebsiteContent } from "../../contentLandingPage";
+const team = WebsiteContent.team;
+
+---
+
+<LayoutCards
+  classnameLayout={'layout-team-4'}
+  sxTitle={{ paddingLeft: "1rem" }}
+>
+  <Title4
+    slot="title"
+    title={"Високо-квалифицирани професионалисти"}
+    variant="light"
+    sx={{textAlign: 'center'}}
+    spanWord={1}
+  />
+  <Fragment slot="cards">
+    {
+      team.map((x, idx) => (
+        
+        <CardTeam4
+            name={x.name}
+            avatarUrl={x.avatarUrl}
+            profession={x.profession}
+        />
+      ))
+    }
+  </Fragment>
+</LayoutCards>
+
+<style>
+  :global(.layout-team-4){
+    background-color: var(--secondary-dark-1);
+}
+
+
+
+</style>

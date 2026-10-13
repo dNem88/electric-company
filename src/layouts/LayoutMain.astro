@@ -5,9 +5,10 @@ import { getImage } from "astro:assets";
 import JsonLd from "../components/JsonLd.astro";
 import "../styles/globals.css";
 import '@fontsource-variable/raleway';
+import Header from "../pages/_components/HeaderTemplate6/Header.astro";
 
 // import Header from "../pages/components/HeaderTemplate6/Header.astro";
-// import SectionFooter from "../components/Common/SectionFooter.astro";
+import SectionFooter from "../components/Common/SectionFooter.astro";
 const {
   title = "GOK Studio ",
   description = "Разработка и поддръжка на уебсайтове.",
@@ -81,10 +82,10 @@ if (typeof image === "string") {
   </head>
   <ConsentManagerLight />
   <body>
-    <!-- <Header /> -->
+    <Header/>
     <main class="main">
       <slot name="main" /> 
-      <!-- <SectionFooter /> -->
+      <SectionFooter />
     </main>
   </body>
 </html>

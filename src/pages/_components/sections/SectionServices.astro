@@ -1,0 +1,52 @@
+---
+import { WebsiteContent } from "../../contentLandingPage";
+import CardServices23 from "@/src/GOK_LIBRARY/cards/services/card-services-23.astro";
+import LayoutCards from "@/src/GOK_LIBRARY/layouts-sections/layout-cards.astro";
+import Title3 from "@/src/GOK_LIBRARY/titles/title3.astro";
+import Button4 from "@/src/GOK_LIBRARY/buttons/button4.astro";
+import FamilyPracticeIcon from "@/src/GOK_LIBRARY/icons/family-practice-icon.astro";
+const servicesData = WebsiteContent.services;
+---
+
+<LayoutCards
+  classnameLayout={"layout-template6-services"}
+  classnameCardsContainer="cards-container-template2"
+  sxTitle={{ paddingLeft: "1rem" }}
+  sxContent={{ width: "100%", padding: "1rem" }}
+>
+  <Title3
+    colorWordPosition={2}
+    align="center"
+    title={"Персонализирани решения, съобразени с Вашите нужди"}
+    slot="title"
+  />
+
+  <Fragment slot="cards">
+    {
+      servicesData.slice(0, 6).map((service, idx) => {
+        /*Create a component that can be mapped in the SLOT with name='icon'*/
+
+        return (
+          <CardServices23
+            title={service.service}
+            content={service.content}
+            href={service.href}
+            imageUrl={service.imageUrl}
+          />
+        );
+      })
+    }
+  </Fragment>
+
+</LayoutCards>
+
+<style>
+  :global(.layout-template6-services) {
+    background: var(--gray-background);
+  }
+  @media screen and (min-width: 1200px) {
+    :global(.cards-container-template2) {
+      width: min(100%, 1300px) !important; /*3 x 320px + 2 x 32px*/
+    }
+  }
+</style>

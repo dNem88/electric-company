@@ -1,0 +1,103 @@
+---
+import InnerPagesHeroSection from './sections/InnerPagesHeroSection.astro';
+import ServiceLink from '@/src/components/Common/service-link.astro';
+import { WebsiteContent } from '../contentLandingPage';
+import CTASection from './usluga/CTASection.astro';
+import Title4 from '@/src/GOK_LIBRARY/titles/title4.astro';
+const services = WebsiteContent.services;
+
+const { title, breadcrumb } = Astro.props;
+---
+
+<InnerPagesHeroSection title={title} breadcrumb={breadcrumb} />
+<section class="layout-single-service">
+  <div class="content-section">
+    <Title4
+            title={title}
+            align="left"
+            sx={{
+               
+                marginBottom: '3rem'
+            }}
+          />
+    <slot name="content" />
+  </div>
+  <aside class="aside-section">
+    <div class="aside-wrapper">
+      {
+        services.map((x) => {
+          return <ServiceLink label={x?.service} href={x?.href} />;
+        })
+      }
+    </div>
+    <CTASection />
+  </aside>
+</section>
+
+<style>
+  /*LayoutForSingleServicePlusASIDE*/
+  .layout-single-service {
+    padding: 5rem 0;
+    width: min(100%, 1200px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content-section {
+    order: 1;
+    width: min(100%, 800px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+  }
+  .aside-section {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 400px);
+    padding: 1rem;
+  }
+  @media screen and (min-width: 1200px) {
+    .layout-single-service {
+      flex-wrap: nowrap;
+    }
+    .content-section {
+      padding: 1rem 4rem;
+    }
+  }
+
+  /*AsideSection*/
+  .aside-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--gray-background);
+    border-radius: 24px;
+    padding: 2rem 1rem;
+    margin-bottom: 5rem;
+  }
+  .aside-service-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .aside-service-text {
+    color: var(--secondary-dark-1);
+  }
+  .aside-service-text:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-main-1);
+  }
+</style>

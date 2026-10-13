@@ -1,0 +1,48 @@
+---
+import Button4 from "@/src/GOK_LIBRARY/buttons/button4.astro";
+import Title4 from "@/src/GOK_LIBRARY/titles/title4.astro";
+---
+
+<section class="wrapper-t4-cta">
+  <Title4
+    title={'Запазете си час за консултация с нас още сега!'}
+    variant="light"
+    align="left"
+    
+  />
+
+  <Button4
+    width={'20em'}
+    variant={"primary"}
+    content={"Запазете консултация"}
+    href={"/kontakti"}
+  />
+</section>
+
+<style>
+  :global(.wrapper-t4-cta){
+    width: 90% !important;
+    display: flex;
+    border-radius: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 16px;
+    background-color: var(--secondary-dark-1);
+    gap: 4rem;
+    
+}
+
+@media screen and (min-width: 1200px){
+    :global(.wrapper-t4-cta){
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 5rem 15rem;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+   
+    
+}
+</style>
