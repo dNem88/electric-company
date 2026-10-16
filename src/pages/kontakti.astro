@@ -3,6 +3,8 @@ import LayoutMain from "@/src/layouts/LayoutMain.astro";
 import Header from "./_components/HeaderTemplate6/Header.astro";
 import InnerPagesHeroSection from "./_components/sections/InnerPagesHeroSection.astro";
 import SectionContacts from "./_components/sections/SectionContacts.astro";
+const mapsHref = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.3238524532189!2d23.364035869639856!3d42.6762843841718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85c4c0c2822b%3A0xee3e0356ccedbfb9!2sGeo%20Milev%2C%20ul.%20%22Kosta%20Lulchev%22%20118%D0%90%20%D0%90%2C%201113%20Sofia!5e0!3m2!1sen!2sbg!4v1792150826349!5m2!1sen!2sbg";
+
 ---
 
 <LayoutMain color="services1">
@@ -12,7 +14,7 @@ import SectionContacts from "./_components/sections/SectionContacts.astro";
     <div class="iframe-wrapper">
       <div class="map-container">
         <iframe
-          src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.2368580540074!2d27.939508199999995!3d43.216046999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a45419b9970f8d%3A0xdc94783600edc602!2z0LYu0LouINCn0LDQudC60LDQn9GA0LjQvNC-0YDRgdC60LgsINC2LtC6LiDQp9Cw0LnQutCwIDQ00JMsIDkwMDUg0JLQsNGA0L3QsA!5e1!3m2!1sbg!2sbg!4v1748342555419!5m2!1sbg!2sbg"}
+          src={mapsHref}
           width="100%"
           height="100%"
           style={{ border: 0 }}

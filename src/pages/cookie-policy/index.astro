@@ -2,7 +2,7 @@
 import LayoutMain from "@/src/layouts/LayoutMain.astro";
 import { getBusinessData } from "@/src/keystatic/getBusinessData";
 const business = await getBusinessData() ?? {};
-const {businessName = 'GOK Studio', address = '', email = '', phone = ''} = business;
+const {businessName, address = '', email = '', phone = ''} = business;
 
 
 // Date for the policy update

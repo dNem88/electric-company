@@ -1,3 +1,4 @@
+
 ---
 import LayoutSideBySide from "@/src/GOK_LIBRARY/layouts-sections/layout-side-by-side.astro";
 import Button4 from "@/src/GOK_LIBRARY/buttons/button4.astro";
@@ -9,58 +10,69 @@ import CheckCircleIconFilled from "@/src/GOK_LIBRARY/icons/check-circle-icon-fil
 >
   <div class="left-section" slot="left">
     <img
-      src={"/consultant1/team10.webp"}
+      src={"/template6/team1.webp"}
       loading="lazy"
-      alt="why choose consultant1"
+      alt="СМП Електро - професионални електромонтажни услуги"
       class="image-left"
     />
   </div>
 
   <div class="right-section" slot="right">
     <p
-      class={"h3"}
+      class="h3"
       style={{
         fontWeight: "650",
         color: "white",
       }}
     >
-      Вашият надежден <span class="span">партньор</span> в бизнеса
+      Вашият надежден <span class="span">партньор</span> за електроуслуги
     </p>
-    <p class={"body2"} style={{ color: "white" }}>
-      {
-        "Работейски с нас получавате индивидуален подход към всеки клиент. С нас можете да разчитате на точност и прозрачност в счетоводството."
-      }
+
+    <p class="body2" style={{ color: "white" }}>
+      В СМП Електро предлагаме решения за изграждане и подмяна на
+      електроинсталации, монтаж на осветление и електрически уреди,
+      както и ремонт на електрически повреди. Работим с внимание
+      към детайлите и се съобразяваме с конкретните нужди на всеки обект.
     </p>
-    <p class={"body2"} style={{ color: "white" }}>
-      {
-        "Работейски с нас получавате индивидуален подход към всеки клиент. С нас можете да разчитате на точност и прозрачност в счетоводството."
-      }
+
+    <p class="body2" style={{ color: "white" }}>
+      Стремим се към качествено изпълнение, коректна комуникация
+      и безопасна работа. Независимо дали става въпрос за ново
+      строителство, ремонт на жилище или електромонтажни дейности
+      в офис, нашата цел е да предложим практично и надеждно решение.
     </p>
+
     <div class="list-item">
       <span class="icon">
         <CheckCircleIconFilled class="icon" />
       </span>
-      <span class="text">{"Индивидуален подход"}</span>
+      <span class="text">Индивидуален подход към всеки обект</span>
     </div>
 
-     <div class="list-item">
+    <div class="list-item">
       <span class="icon">
         <CheckCircleIconFilled class="icon" />
       </span>
-      <span class="text">{"Професионализъм и опит"}</span>
+      <span class="text">Качествено изпълнение и внимание към детайла</span>
     </div>
 
-     <div class="list-item">
+    <div class="list-item">
       <span class="icon">
         <CheckCircleIconFilled class="icon" />
       </span>
-      <span class="text">{"Надежност и резултати"}</span>
+      <span class="text">Фокус върху безопасността и надеждността</span>
     </div>
-   
-    <Button4 content={"Научете повече"} variant={"primary"} href={"/uslugi"} />
+
+    <Button4
+      content={"Разгледайте услугите"}
+      variant={"primary"}
+      href={"/uslugi"}
+    />
   </div>
+
   <div class="polygon" slot="absolute-figure"></div>
 </LayoutSideBySide>
+
 
 <style>
   /*WhyUsSection of LandingOPAge*/

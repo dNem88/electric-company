@@ -106,41 +106,24 @@ export const WebsiteContent = {
 
     services: [
         {
-            href: '/template6/services#section-1',
+            href: '/uslugi/avariini-remonti',
             service: 'Електрически ремонти и аварийни услуги',
             content: `Ремонт на контакти, ключове, табла, къси съединения и други електрически проблеми – бързо и безопасно.`,
             imageUrl: '/template6/about.webp'
         },
         {
-            href: '/template6/services#section-2',
+            href: '/uslugi/izgrajdane-na-electroinstalacii',
             service: 'Изграждане и подмяна на електрически инсталации',
             content: `Цялостни инсталации за домове, офиси и обекти. Подмяна на кабели, защити и ел. табла.`,
             imageUrl: '/template6/benefits.webp'
         },
         {
-            href: '/template6/services#section-3',
+            href: '/uslugi/montazh-na-osvetlenie-i-elektlicheski-uredi',
             service: 'Монтаж на осветление и електрически уреди',
             content: `Инсталиране на LED системи, лампи, смарт осветление, бойлери и други уреди.`,
             imageUrl: '/template6/team1.webp'
         },
-        {
-            href: '/template6/services#section-4',
-            service: 'Профилактика и електрическа поддръжка',
-            content: `Редовни проверки, анализ на безопасността и предотвратяване на аварии.`,
-            imageUrl: '/template6/electrician.webp'
-        },
-         {
-            href: '/template6/services#section-2',
-            service: 'Изграждане и подмяна на електрически инсталации',
-            content: `Цялостни инсталации за домове, офиси и обекти. Подмяна на кабели, защити и ел. табла.`,
-            imageUrl: '/template6/team3.webp'
-        },
-        {
-            href: '/template6/services#section-3',
-            service: 'Монтаж на осветление и електрически уреди',
-            content: `Инсталиране на LED системи, лампи, смарт осветление, бойлери и други уреди.`,
-            imageUrl: '/template6/team4.webp'
-        },
+        
     ],
 
     benefits: [

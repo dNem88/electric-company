@@ -1,14 +1,14 @@
 ---
 import Logo from "./logo.astro";
 const links = [
-  { content: "дизайн1", href: "/template1" },
-  { content: "дизайн2", href: "/template2" },
-  { content: "дизайн3", href: "/template3" },
-  { content: "дизайн4", href: "/template4" },
-  { content: "дизайн5", href: "/template5" },
-  { content: "дизайн6", href: "/template6" },
-  { content: "дизайн7", href: "/template7" },
-  { content: "дизайн8", href: "/template8" },
+  {label: 'Начало',href: '/'},
+  {label: 'Услуги',href: '/uslugi'}, 
+ {label: 'Аварийни ремонти',href: '/uslugi/avariini-remonti'},
+    {label: 'Изграждане на електроинсталации',href: '/uslugi/izgrajdane-na-electroinstalacii'},
+    {label: 'Монтаж на осветление и електрически уреди',href: '/uslugi/montazh-na-osvetlenie-i-elektlicheski-uredi'},
+ {label: 'За нас',href: '/za-nas'},
+    {label: 'Блог',href: '/blog'},
+     {label: 'Контакти',href: '/kontakti'},
 ];
 ---
 
@@ -25,7 +25,7 @@ const links = [
             links.map((x, i) => {
               return (
                 <a href={`${x.href}`} class="footer-link">
-                  {x.content}
+                  {x.label}
                 </a>
               );
             })
